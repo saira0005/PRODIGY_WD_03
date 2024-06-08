@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #94e4e5; 
+}
+
+.title {
+    text-align: center;
+    padding: 20px 0; 
+    margin: 0;
+    background-color: #a4b4f0; 
+    box-shadow: 0 5px 10px #0000001a; 
+}
+
+.container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; 
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    gap: 5px;
+}
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #a2b3da;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.cell:hover {
+    background-color: #ddd;
+}
+.cell.clicked {
+    cursor: not-allowed;
+}
+.cell.clicked:hover {
+    background-color: #eee;
+}
